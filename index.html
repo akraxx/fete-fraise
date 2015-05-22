@@ -4,7 +4,7 @@
         <title>Fête de la fraise à Tressin 2015 - 11 ème édition</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta name="description" content="Fête de la Fraise à Tressin 59152, à coté de Lille, Dimanche 25 mai 2015 Terroir Gourmandises Artisanat et Animations.">
+        <meta name="description" content="Fête de la Fraise à Tressin 59152, à coté de Lille, Dimanche 24 mai 2015 Terroir Gourmandises Artisanat et Animations.">
         <meta name="author" content="Association de la Fete de la Fraise">
         <meta name="keywords" content="fraise, fete, tressin, cancer, artisans, animation, 24 mai 2015, salle polyvalente, bon gout">
         
@@ -712,11 +712,6 @@
             <!-- /Footer -->
 
             <!-- JavaScript -->
-            <script>
-                paceOptions = {
-                    elements: true
-                };
-            </script>
             <script src="js/jquery-1.10.2.js"></script>
             <script src="js/bootstrap.min.js"></script>
             <script src="js/pace.min.js"></script>
@@ -761,6 +756,14 @@
                 });
             </script>
             <script>
+                paceOptions = {
+                    // Disable the 'elements' source
+                    elements: false,
+
+                    // Only show the progress on regular and ajax-y page navigation,
+                    // not every request
+                    restartOnRequestAfter: false
+                }
                 Pace.on('hide', function() {
                     $("#intro").hide();
                     $("#main-frame").show();
